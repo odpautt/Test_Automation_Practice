@@ -74,7 +74,7 @@ public class ComprarArticulos {
     }
 
     public void  agregarAlCarritoYContinuarComprando (String numeroDelArticulo){
-        try {
+
         agregarArticuloAlCarrito(numeroDelArticulo);
 
         WebElement checkOut = new WebDriverWait(driver, 10).until(ExpectedConditions
@@ -84,9 +84,6 @@ public class ComprarArticulos {
 
         WebElement salida = new WebDriverWait(driver, 5).until(ExpectedConditions
                 .visibilityOfElementLocated(By.xpath("(//div[@class='product-container'])["+numeroDelArticulo+"]")));
-        }
-        finally {
 
-        }
     }
 }
